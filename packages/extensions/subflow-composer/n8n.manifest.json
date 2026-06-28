@@ -1,0 +1,25 @@
+{
+	"name": "@hermes/n8n-extension-subflow-composer",
+	"displayName": "Subflow Composer",
+	"description": "Create reusable subflows from node selections",
+	"publisher": "Hermes Agent",
+	"version": "0.1.0",
+	"categories": ["workflow", "automation"],
+	"minSDKVersion": "0.0.0",
+	"entry": {
+		"backend": "./dist/backend/index.mjs",
+		"frontend": "./dist/frontend/index.mjs"
+	},
+	"permissions": {
+		"frontend": [],
+		"backend": []
+	},
+	"events": [],
+	"extends": {
+		"views": {
+			"workflows": {
+				"header": "SubflowLibrary"
+			}
+		}
+	}
+}
