@@ -1,0 +1,6 @@
+{
+	"node": "n8n-nodes-base.subflow",
+	"categories": ["Core Nodes"],
+	"alias": ["Subflow", "Reusable", "Compose"],
+	"subcategories": { "Core Nodes": ["Flow"] }
+}

@@ -798,6 +798,7 @@
       "dist/nodes/StopAndError/StopAndError.node.js",
       "dist/nodes/Storyblok/Storyblok.node.js",
       "dist/nodes/Strapi/Strapi.node.js",
+      "dist/nodes/Subflow/Subflow.node.js",
       "dist/nodes/Strava/Strava.node.js",
       "dist/nodes/Strava/StravaTrigger.node.js",
       "dist/nodes/Stripe/Stripe.node.js",
