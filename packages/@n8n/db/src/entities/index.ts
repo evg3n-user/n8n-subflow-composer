@@ -33,6 +33,7 @@ import { SecretsProviderConnection } from './secrets-provider-connection';
 import { Settings } from './settings';
 import { SharedCredentials } from './shared-credentials';
 import { SharedWorkflow } from './shared-workflow';
+import { SubflowEntity } from './subflow-entity';
 import { TagEntity } from './tag-entity';
 import { TestCaseExecution } from './test-case-execution.ee';
 import { TestRun } from './test-run.ee';
@@ -78,6 +79,7 @@ export {
 	Scope,
 	SharedCredentials,
 	SharedWorkflow,
+	SubflowEntity,
 	TagEntity,
 	User,
 	WorkflowDependency,
@@ -126,6 +128,7 @@ export const entities = {
 	Scope,
 	SharedCredentials,
 	SharedWorkflow,
+	SubflowEntity,
 	TagEntity,
 	User,
 	WorkflowDependency,
