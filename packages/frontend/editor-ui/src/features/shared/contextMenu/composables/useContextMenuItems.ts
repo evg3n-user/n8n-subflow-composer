@@ -39,6 +39,7 @@ export type ContextMenuAction =
 	| 'open_sub_workflow'
 	| 'tidy_up'
 	| 'extract_sub_workflow'
+	| 'create_subflow'
 	| 'focus_ai_on_selected';
 
 /**
@@ -175,6 +176,13 @@ export function useContextMenuItems(targetNodeIds: ComputedRef<string[]>): Compu
 				divided: true,
 				label: i18n.baseText('contextMenu.extract', { adjustToNumber: nodes.length }),
 				shortcut: { altKey: true, keys: ['X'] },
+				disabled: isReadOnly.value,
+			},
+			{
+				id: 'create_subflow',
+				label: i18n.baseText('subflowComposer.createFromSelection', {
+					fallback: 'Create subflow',
+				}),
 				disabled: isReadOnly.value,
 			},
 		];

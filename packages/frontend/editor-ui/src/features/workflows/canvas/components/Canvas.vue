@@ -84,6 +84,7 @@ import { type ContextMenuAction } from '@/features/shared/contextMenu/composable
 import { useFocusedNodesStore } from '@/features/ai/assistant/focusedNodes.store';
 import { useChatPanelStore } from '@/features/ai/assistant/chatPanel.store';
 import { useSetupPanelStore } from '@/features/setupPanel/setupPanel.store';
+import { useUIStore } from '@/app/stores/ui.store';
 
 const $style = useCssModule();
 
@@ -1100,6 +1101,12 @@ async function onContextMenuAction(action: ContextMenuAction, nodeIds: string[])
 			return await onTidyUp({ source: 'context-menu' });
 		case 'extract_sub_workflow':
 			return emit('extract-workflow', nodeIds);
+		case 'create_subflow':
+			useUIStore().openModalWithData({
+				name: 'CreateSubflowDialog',
+				data: { nodeIds },
+			} as any);
+			return;
 		case 'open_sub_workflow': {
 			return emit('open:sub-workflow', nodeIds[0]);
 		}
